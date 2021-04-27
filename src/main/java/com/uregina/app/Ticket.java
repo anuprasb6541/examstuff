@@ -60,7 +60,12 @@ public class Ticket
 		//condition 4: max layover time >= total layover times combined
 		int layoverTime = 0;
 		for (int i=0; i < ticket.size() - 1; i++){
-			layoverTime += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
+			//layoverTime += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
+			try {
+				layoverTime += Flight.calculateLayoverTime(ticket.get(i), ticket.get(i+1));
+			} catch (MoreThanOneDayException e) {
+				e.printStackTrace();
+			}
 		}
 
 		if (layoverTime > maxLayoverTime) return false;
