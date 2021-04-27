@@ -73,8 +73,8 @@ public class Time12
 	*/
 	public static int subtract(Time12 t1, Time12 t2)
 	{
-		if(t1.toTime24().getHours()<1||t1.toTime24().getHours()>12) throw new InvalidTimeException();
-		if(t2.toTime24().getHours()<1||t2.toTime24().getHours()>12) throw new InvalidTimeException();
+		//if(t1.toTime24().getHours()<1||t1.toTime24().getHours()>12) throw new InvalidTimeException();
+		//if(t2.toTime24().getHours()<1||t2.toTime24().getHours()>12) throw new InvalidTimeException();
 		int difference=0;
 		//Todo: add your code here
 		difference = (t1.toTime24().getMinutes() - t2.toTime24().getMinutes()) + ((t1.toTime24().getHours() - t2.toTime24().getHours()) * 60);
