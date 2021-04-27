@@ -51,14 +51,11 @@ public class Ticket
 				flightTime += ticket.get(i).calculateFlightTime();
 			} catch (MoreThanOneDayException e) {
 				e.printStackTrace();
-			}
+			}//cool
 		}
 
 		if (flightTime > maxFlightTime) return false;
 
-		// catch (NegativeTimeException e) {
-		//	e.printStackTrace();
-		//}
 
 		//condition 4: max layover time >= total layover times combined
 		int layoverTime = 0;
