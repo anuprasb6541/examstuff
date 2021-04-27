@@ -18,7 +18,7 @@ public class App
 	 * 		3. Get User restriction
 	 * 		4. Checking the ticket
 	 */
-    public static void main( String[] args ) throws MoreThanOneDayException
+    public static void main( String[] args ) throws MoreThanOneDayException, NegativeTimeException
     {
 		ArrayList<Flight> ticket= new ArrayList<Flight>();
 		Scanner scan = new Scanner(System.in);
@@ -94,7 +94,7 @@ public class App
 			,maxLayoverTime,hasSchengenVisa)? "\tValid":"\tInvalid" );
     }
 	// prompt for to enter the value for the "name" until getting a valid integer
-	public static int nextInt(String name)
+	public static int nextInt(String name) throws NegativeTimeException, MoreThanOneDayException
 	{
 		int ret=-1;
 		System.out.println("\tEnter "+name+" :");
@@ -117,7 +117,7 @@ public class App
 		
 	}
 	// parse a string for a valid Date object, return null if failed
-	public static Date parseDate(String date)
+	public static Date parseDate(String date) throws NegativeTimeException, MoreThanOneDayException
 	{
 		String [] splitted=date.split("/");
 		if(splitted.length!=3)
@@ -141,7 +141,7 @@ public class App
 		return retDate;
 	}
 	// parse a string for a valid Time12 object, return null if failed
-	public static Time12 parseTime(String time)
+	public static Time12 parseTime(String time) throws NegativeTimeException, MoreThanOneDayException
 	{
 		String [] splitted=time.split(":");
 		if(splitted.length!=2)
