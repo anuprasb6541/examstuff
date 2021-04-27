@@ -50,13 +50,13 @@ public class Time24
 		Time24 time=null;
 		//Todo : add your code here
 		// case 1: if time is between 12:00 AM and 12:59 AM, then we subtract 12 hours, so effectively making the hour = 0
-		if (hours == 12 && (minutes >= 0) && (minutes <=59) && (am_pm == am)){
-			//hours = 0;
-			time.hours = hours - 12;
+		if (hours == 12 && (am_pm == AmPm.am)){
+			hours = 0;
+			//time.hours = hours - 12;
 		}
 		// case 2: if the time is between 1:00 AM and 12:59 PM, the hours remain the same, so don't change anything
 		// case 3: if the time is between 1:00 PM and 11:59 PM, then we'd add 12 hours
-		if ((hours >= 1) && (hours <= 11) && (minutes >= 0) && (minutes <= 59) && (am_pm == pm)){
+		if ((hours >= 1) && (hours <= 11) && (minutes >= 0) && (minutes <= 59) && (am_pm == AmPm.pm)){
 			time.hours = hours + 12;
 		}
 
