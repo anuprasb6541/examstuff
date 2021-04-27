@@ -46,16 +46,17 @@ public class Ticket
 		// condition 3: max flight time >= total flight times combined
 		int flightTime = 0;
 		for (int i=0; i < ticket.size(); i++){
-			flightTime += ticket.get(i).calculateFlightTime();
+			//flightTime += ticket.get(i).calculateFlightTime();
+			try {
+				flightTime += ticket.get(i).calculateFlightTime();
+			} catch (MoreThanOneDayException e) {
+				e.printStackTrace();
+			}
 		}
 
 		if (flightTime > maxFlightTime) return false;
 
-		try {
-			flightTime += ticket.get(i).calculateFlightTime();
-		} catch (MoreThanOneDayException e) {
-			e.printStackTrace();
-		}// catch (NegativeTimeException e) {
+		// catch (NegativeTimeException e) {
 		//	e.printStackTrace();
 		//}
 
