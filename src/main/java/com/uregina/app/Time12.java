@@ -77,8 +77,7 @@ public class Time12
 		if(t2.toTime24().getHours()<1||t2.toTime24().getHours()>12) throw new InvalidTimeException();
 		int difference=0;
 		//Todo: add your code here
-		difference = t1.toTime24().getMinutes() - t2.toTime24().getMinutes();
-
+		difference = (t1.toTime24().getMinutes() - t2.toTime24().getMinutes()) + ((t1.toTime24().getHours() - t2.toTime24().getHours()) * 60);
 		// end of your code
 		return difference;
 	}
