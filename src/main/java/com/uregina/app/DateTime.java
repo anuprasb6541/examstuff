@@ -57,7 +57,7 @@ public class DateTime
 		try{
 
 		
-		if(Date.equal(d1.getDate(), d2.getDate()){
+		if(Date.equal(d1.getDate(), d2.getDate())){
 			diff = Time12.subtract(d1.getTime(), d2.getTime());
 		}
 
