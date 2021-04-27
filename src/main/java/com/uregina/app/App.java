@@ -16,7 +16,7 @@ public class App
 	 * 		3. Get User restriction
 	 * 		4. Checking the ticket
 	 */
-    public static void main( String[] args )
+    public static void main( String[] args ) throws MoreThanOneDayException
     {
 		ArrayList<Flight> ticket= new ArrayList<Flight>();
 		Scanner scan = new Scanner(System.in);
