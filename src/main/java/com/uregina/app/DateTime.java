@@ -57,8 +57,8 @@ public class DateTime
 		try{
 
 		
-		if((d1.equal(d2)) || (d1.nextDate() == d2) || (d2.nextDate() == d1)){
-			diff = d1.getTime().getMinutes() - d2.getTime().getMinutes();
+		if(Date.equal(d1.getDate(), d2.getDate()){
+			diff = Time12.subtract(d1.getTime(), d2.getTime());
 		}
 
 	} catch(MoreThanOneDayException e) {
