@@ -54,11 +54,18 @@ public class DateTime
 		//Todo: add your code here
 		// we have three valid cases here: d1 == d2, d2 is nextDate of d1, or d1 is nextDate of d2.
 		// All other cases we ignore
+		try{
+
+		
 		if((d1.equal(d2)) || (d1.nextDate() == d2) || (d2.nextDate() == d1)){
 			diff = d1.getTime().getMinutes() - d2.getTime().getMinutes();
-		}else{
-			throw MoreThanOneDayException;
 		}
+
+	} catch(MoreThanOneDayException e) {
+		e.printStackTrace();
+
+	}
+
 
 		//end of your code
 		return diff;
