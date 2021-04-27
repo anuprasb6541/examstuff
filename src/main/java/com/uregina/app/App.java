@@ -117,7 +117,7 @@ public class App
 		
 	}
 	// parse a string for a valid Date object, return null if failed
-	public static Date parseDate(String date) throws NegativeTimeException, MoreThanOneDayException
+	public static Date parseDate(String date)
 	{
 		String [] splitted=date.split("/");
 		if(splitted.length!=3)
@@ -141,7 +141,7 @@ public class App
 		return retDate;
 	}
 	// parse a string for a valid Time12 object, return null if failed
-	public static Time12 parseTime(String time) throws NegativeTimeException, MoreThanOneDayException
+	public static Time12 parseTime(String time)
 	{
 		String [] splitted=time.split(":");
 		if(splitted.length!=2)
