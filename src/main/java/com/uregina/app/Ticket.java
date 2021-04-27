@@ -38,7 +38,7 @@ public class Ticket
 	public static boolean checkTicket( ArrayList<Flight> ticket, int maxFlightsCount, int maxFlightTime, int maxLayoverTime, boolean hasSchengenVisa)
 	{
 		//Todo: add your code here
-		// not sure how to test if in IATA format yet... maybe will figure out maybe not...
+		// condition 1: not sure how to test if in IATA format yet... maybe will figure out maybe not...
 		
 		// condition 2: max flight count >= num of flights
 		if (ticket.size() > maxFlightsCount) return false;
