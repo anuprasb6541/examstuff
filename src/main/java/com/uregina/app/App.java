@@ -94,7 +94,7 @@ public class App
 			,maxLayoverTime,hasSchengenVisa)? "\tValid":"\tInvalid" );
     }
 	// prompt for to enter the value for the "name" until getting a valid integer
-	public static int nextInt(String name) throws NegativeTimeException, MoreThanOneDayException
+	public static int nextInt(String name)
 	{
 		int ret=-1;
 		System.out.println("\tEnter "+name+" :");
