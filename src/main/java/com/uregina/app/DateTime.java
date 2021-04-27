@@ -59,6 +59,8 @@ public class DateTime
 		
 		if(Date.equal(d1.getDate(), d2.getDate())){
 			diff = Time12.subtract(d1.getTime(), d2.getTime());
+		}else{
+			throw new MoreThanOneDayException();
 		}
 
 	} catch(MoreThanOneDayException e) {
