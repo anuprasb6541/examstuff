@@ -3,6 +3,8 @@ package com.uregina.app;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.uregina.exceptions.*;
+
 /**
  * App , creates a ticket and check its validity
  *
