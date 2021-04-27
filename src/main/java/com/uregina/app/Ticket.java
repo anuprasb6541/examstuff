@@ -35,7 +35,7 @@ public class Ticket
 	 * 		(class: Flight , method: calculateLayoverTime)
 	 * 		(class: ticket , method: hasCyclicTrip)
 	*/
-	public static boolean checkTicket( ArrayList<Flight> ticket, int maxFlightsCount, int maxFlightTime, int maxLayoverTime, boolean hasSchengenVisa) throws MoreThanOneDayException
+	public static boolean checkTicket( ArrayList<Flight> ticket, int maxFlightsCount, int maxFlightTime, int maxLayoverTime, boolean hasSchengenVisa) throws MoreThanOneDayException, NegativeTimeException
 	{
 		//Todo: add your code here
 		// condition 1: not sure how to test if in IATA format yet... maybe will figure out maybe not...
