@@ -63,7 +63,7 @@ public class Ticket
 		int schengenAirports = 0;
 		for (Flight flight : ticket){
 			for (int i=0; i < Ticket.SchengenAirportsCode.length; i++){
-				if (flight.getArrivalAirport().equals(Ticket.SchengenAirportsCode[i]){
+				if (flight.getArrivalAirport().equals(Ticket.SchengenAirportsCode[i])){
 					schengenAirports++;
 				}
 			}
