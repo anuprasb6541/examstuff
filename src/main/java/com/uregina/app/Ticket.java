@@ -99,7 +99,9 @@ public class Ticket
 	public static boolean hasCyclicTrip(ArrayList<Flight> ticket)
 	{
 		//Todo : add your code here
-		
+		if (ticket.get(0).getDepatureAirport().equals(ticket.get(ticket.size()).getArrivalAirport())) return true;
+		// since round trips are allowed, the first airport can be the same as the last airport
+		// otherwise false will be returned
 
 		//Todo : end of your code
 		return false;
