@@ -77,12 +77,14 @@ public class Ticket
 
 		if ((schengenAirports > 1) && (!hasSchengenVisa)) return false;
 
-		//condition 6: no cyclic trip, has not been implemented
+		//condition 6: no cyclic trip
+		if (hasCyclicTrip(ticket)) return false;
 
 		//condition 7: The sequence of flights in correct ( the arrival airport of a flight is the departure airport of the next flight)
 		for(int i = 0; i < ticket.size() - 1; i++){
 			if (!(ticket.get(i).getArrivalAirport().equals(ticket.get(i+1).getDepatureAirport()))) return false;
 		}
+
 
 		//end of your code
 		return true;
